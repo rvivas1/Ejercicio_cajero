@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Retiros</title>
 </head>
 <body>
-    <h1>RETIRO</h1>
+    <div class="container">
+        <h1 class="text-secondary">Retiro cuenta de ahorros</h1>
+        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <option value="0" selected>¿Cuánto dinero deseas retirar?</option>
+            <option value="1">20.000</option>
+            <option value="2">50.000</option>
+            <option value="3">100.000</option>
+            <option value="3">200.000</option>
+            <option value="3">Otro valor</option>
+          </select>
+          <input class="form-control form-control-sm" type="text" placeholder="Ingrese monto" aria-label=".form-control-sm example">
+          <br>
+          <div class="row">
+              <div class="col-md-3">
+                <button type="button" class="btn btn-success">Aceptar</button>
+                <button type="button" class="btn btn-danger">Cancelar</button>
+              </div>
+          </div>
+          <br>
+        <a class="btn btn-primary" href="Bancomain.html" role="button">Regresar</a>
+    </div>
+   
 </body>
+<script src="js/vue.js"></script>
+<script src=""></script>
 </html>
