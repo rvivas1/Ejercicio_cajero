@@ -8,45 +8,48 @@
     <title>Retiros</title>
 </head>
 <body>
-    <div id="app" class="container">
+    <div id="app1" class="container">
 
-            <h1>Retiro</h1>
+            <h1>Retiros</h1>
             <div class="form-check form-check-inline">
-                <input v-model="opcValor" class="form-check-input h5" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <input v-model="opcValor" @change="getValor" class="form-check-input h5" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
                 <label class="form-check-label h4" for="inlineRadio1">10.000</label>
             </div>
             <div class="form-check form-check-inline">
-                <input v-model="opcValor" class="form-check-input h5" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <input v-model="opcValor" @change="getValor" class="form-check-input h5" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
                 <label class="form-check-label h4" for="inlineRadio2">20.000</label>
             </div>
             <div class="form-check form-check-inline">
-                <input v-model="opcValor" class="form-check-input h5" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                <input v-model="opcValor" @change="getValor" class="form-check-input h5" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3">
                 <label class="form-check-label h4" for="inlineRadio3">50.000</label>
             </div>
             <div class="form-check form-check-inline">
-                <input v-model="opcValor" class="form-check-input h5" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option4">
+                <input v-model="opcValor" @change="getValor" class="form-check-input h5" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="4">
                 <label class="form-check-label h4" for="inlineRadio3">100.000</label>
             </div>
             <div class="form-check form-check-inline">
-                <input v-model="opcValor" class="form-check-input h5" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option6">
+                <input v-model="opcValor" @change="getValor" class="form-check-input h5" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="5">
                 <label class="form-check-label h4" for="inlineRadio3">Otro valor</label>
             </div>
             <br>
             <div v-if="opcValor==5" class="input-group mb-3">
                 <span class="input-group-text">$</span>
-                <input v-model.number="valor" type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <input v-model.number="valor" @change="getValor" type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
                 <span class="input-group-text h2">.0</span>
               </div>
             <br>
-            <button @click="procesar" class="btn btn-primary col-8">Saldo</button>
-            <br>
+              <button @click="procesar" class="btn btn-success col-7">Retirar</button>
+              <br>
+              <br>
+              <a class="btn btn-primary col-3"  href="Bancomain.html" role="button">Regresar</a>
+              <br>
+              <br>
             <h3 class="text-muted"> Registro de movimientos</h3>
             <table class="table table-striped">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">Valores</th>
-
                   </tr>
                 </thead>
                 <tbody v-if="arrayValores.leng">
