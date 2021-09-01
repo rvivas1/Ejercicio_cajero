@@ -35,24 +35,29 @@
     <br>
     <button @click="tArticulo" class="btn btn-primary col-8">Comprar</button>
     <br>
-    <h1 v-text="total"></h1>
       <br>
       <div class="">
         <h3 class="text-secondary">Registro de compras</h3>
         <table class="table col-lg-4">
           <thead>
             <tr>
-              <th scope="col">Articulos</th>
+              <th scope="col">Articulo</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Total</th>
             </tr>
           </thead>
           <tbody v-if="arrayArtic.length">
             <tr v-for="item in arrayArtic">
-              <td v-text="item"></td>
+              <td v-text="item.nombre"></td>
+              <td v-text="item.cant"></td>
+              <td v-text="item.precio"></td>
+              <td v-text="item.total"></td>
             </tr>
           </tbody>
           <tbody v-else>
             <tr>
-              <td>NO existen registros</td>
+              <td colspan="4">NO existen registros</td>
             </tr>
           </tbody>
         </table>
