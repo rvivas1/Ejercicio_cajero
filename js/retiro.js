@@ -1,5 +1,5 @@
 var app = new Vue({
-    el: '#app1',
+    el: '#app',
     data: {
         saldo: 500000,
         opcValor: 0,
@@ -18,7 +18,7 @@ var app = new Vue({
             } else if (this.opcValor == "4") {
                 this.valor = 100000;
             } else {
-                // this.valor == "4";
+                // this.valor == "5";
             }
         },
         validarSaldo() {

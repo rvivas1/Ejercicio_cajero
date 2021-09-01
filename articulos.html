@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,61 +8,59 @@
     <title>Articulos</title>
 </head>
 <body>
+  <div id="app" class="container">
+    <h1>Articulos</h1>
+    <br>
+    <div class="row">
+      <div class="form-check col-2 px-1">
+        <input v-model="opcValor" value="1" class="form-check-input h5" type="radio" name="flexRadioDefault"
+        id="flexRadioDefault1">
+        <label class="form-check-label h4" for="flexRadioDefault1">
+          Televisor
+        </label>
+      </div>
+      <div class="form-check col-2">
+        <input v-model="opcValor" value="2" class="form-check-input h5" type="radio" name="flexRadioDefault"
+        id="flexRadioDefault2" checked>
+        <label class="form-check-label h4" for="flexRadioDefault2">
+          Lavadora
+        </label>
+      </div>
+    </div>
+    <br>
+    <div class="input-group input-group-sm mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-sm">Cantidad</span>
+      <input  v-model="cant" type="text" placeholder="ingrese cantidad" class="form-control"  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+    </div>
+    <br>
+    <button @click="tArticulo" class="btn btn-primary col-8">Comprar</button>
+    <br>
+    <h1 v-text="total"></h1>
+      <br>
+      <div class="">
+        <h3 class="text-secondary">Registro de compras</h3>
+        <table class="table col-lg-4">
+          <thead>
+            <tr>
+              <th scope="col">Articulos</th>
+            </tr>
+          </thead>
+          <tbody v-if="arrayArtic.length">
+            <tr v-for="item in arrayArtic">
+              <td v-text="item"></td>
+            </tr>
+          </tbody>
+          <tbody v-else>
+            <tr>
+              <td>NO existen registros</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     
+  </div> 
+   
 </body>
-<div id="app">
-    <div class="container">
-        <h1>Articulos</h1>
-        <br>
-        <div class="row">
-            <div class="form-check col-4">
-                <input class="form-check-input h3" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label h3" for="flexRadioDefault1">
-                  Televisor
-                </label>
-              </div>
-              <div class="form-check col-md-6">
-                <input class="form-check-input h3" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                <label class="form-check-label h3" for="flexRadioDefault2">
-                 Lavadora
-                </label>
-              </div>
-        </div>
-        <br>
-        <div class="input-group input-group-sm mb-3">
-            <span class="input-group-text" id="inputGroup-sizing-sm">Cantidad</span>
-            <input type="text" class="form-control" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-sm">
-    </div>
-    <br>
-    <button @click="procesar" class="btn btn-primary col-8">Comprar</button>
-    <br>
-    <div class="container">
-        <h3>Registro de compras</h3>
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Televisor</th>
-                <th scope="col">Lavadora</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-              </tr>
-              
-            </tbody>
-          </table>
-    </div>
-</div>
 <script src="js/sources/vue.js"></script>
 <script src="js/artic.js"></script>
-</html>
+</html> -->
